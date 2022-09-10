@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import DECKS from "../../data/decks";
 import { Box, Card, Modal, Stack, Typography, Button } from "@mui/material";
-import UnmatchedCard from "../../components/unmatchedCard";
+import UnmatchedCard from "../../components/UnmatchedCard";
 import UnmatchedFilter from "../../components/UnmatchedFilter";
 import {
   ATTACK_IMAGE,
