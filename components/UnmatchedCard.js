@@ -13,7 +13,7 @@ function UnmatchedCard({
 }) {
   return (
     <Box sx={{ position: "relative", width: "100%" }}>
-      <Card sx={{ opacity: discarted ? "0.2" : 1, width: "100%" }}>
+      <Card sx={{ opacity: discarted ? "0.21" : 1, width: "100%" }}>
         <Stack spacing={1} direction={"row"}>
           <UnmatchedType type={type} value={value} />
           {characterName !== "ANY" && (
