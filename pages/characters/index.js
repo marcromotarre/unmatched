@@ -32,7 +32,7 @@ function Charcaters() {
   console.log(DECKS.decks);
   return (
     <Box>
-      {[SETS.sets[0], SETS.sets[1], SETS.sets[4], SETS.sets[9], SETS.sets[10]].map((set) => (
+      {[SETS.sets[0], SETS.sets[1], SETS.sets[4], SETS.sets[9]].map((set) => (
         <Set key={set.slug} set={set}></Set>
       ))}
     </Box>
