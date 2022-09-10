@@ -16,6 +16,11 @@ import BLOODY_MARY_CHARACTER_CARD_IMAGE from "../images/charcater-cards/bloody-m
 import SUN_WUKONG_CHARACTER_CARD_IMAGE from "../images/charcater-cards/sun-wukong-character-card.webp";
 import YENNENGA_CHARACTER_CARD_IMAGE from "../images/charcater-cards/yennenga-character-card.jpeg";
 
+
+import GHOST_RIDER_CHARACTER_CARD_IMAGE from "../images/charcater-cards/ghost-rider-character-card.webp";
+import LUKE_CAGE_CHARACTER_CARD_IMAGE from "../images/charcater-cards/luke-cage-character-card.webp";
+import MOON_KNIGHT_CHARACTER_CARD_IMAGE from "../images/charcater-cards/moon-knight-character-card.webp";
+
 export const CHARACTER_CARDS_IMAGES = {
   alice: ALICE_CHARACTER_CARD_IMAGE,
   sinbad: SINBAD_CHARACTER_CARD_IMAGE,
@@ -34,6 +39,12 @@ export const CHARACTER_CARDS_IMAGES = {
   "bloody-mary": BLOODY_MARY_CHARACTER_CARD_IMAGE,
   "sun-wukong": SUN_WUKONG_CHARACTER_CARD_IMAGE,
   yennenga: YENNENGA_CHARACTER_CARD_IMAGE,
+
+  "ghost-rider": GHOST_RIDER_CHARACTER_CARD_IMAGE,
+  "luke-cage": LUKE_CAGE_CHARACTER_CARD_IMAGE,
+  "moon-knight": MOON_KNIGHT_CHARACTER_CARD_IMAGE,
+
+
 };
 
 export const characterNames = {
@@ -85,4 +96,13 @@ export const characterNames = {
 
   //Hells kitchen
   DAREDEVIL: { name: "Daredevil", slug: "daredevil" },
+
+  //Redemption Row
+  "GHOST RIDER": { name: "Ghost Rider", slug: "ghost-rider" },
+
+  "MOON KNIGHT": { name: "Moon Knight", slug: "moon-knight" },
+
+  "LUKE CAGE": { name: "Luke Cage", slug: "luke-cage" },
+  "MISTY KNIGHT": { name: "Misty Knight", slug: "misty-knight" },
+  
 };
