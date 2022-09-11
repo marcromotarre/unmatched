@@ -29,12 +29,12 @@ function UnmatchedType({ type, value }) {
         backgroundColor: typeColor(type),
         width: "fit-content",
         padding: 1,
+        width: "100%"
       }}
     >
       <Box
         component="img"
-        width="37px"
-        height="37px"
+        width="50%"
         src={typeImage(type).src}
       />
       {type !== "scheme" && (

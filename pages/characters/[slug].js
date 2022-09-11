@@ -31,8 +31,8 @@ function About() {
   useEffect(() => {
     const _cards = [
       ...cards.sort((a, b) => {
-        if (a.discarted === true && b.discarted === false) return 1;
-        if (a.discarted === false && b.discarted === true) return -1;
+       // if (a.discarted === true && b.discarted === false) return 1;
+       // if (a.discarted === false && b.discarted === true) return -1;
         if (a.type !== "scheme" && b.type === "scheme") return -1;
         if (a.type === "scheme" && b.type !== "scheme") return 1;
         if (a.type !== "scheme" && b.type === "scheme") return -1;
@@ -258,6 +258,10 @@ function About() {
               value={card.value}
               characterName={card.characterName}
               discarted={card.discarted}
+              basicText={card.basicText}
+              immediateText={card.immediateText}
+              duringText={card.duringText}
+              afterText={card.afterText}
               discardCard={() => {
                 const _cards = [...deck.cards];
                 const index = _cards.findIndex(({id}) => id === card.id)
