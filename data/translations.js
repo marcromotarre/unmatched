@@ -311,49 +311,49 @@ export const TRANSLATIONS = {
     en: "Education Never Ends",
     es: "Nunca se deja de aprender",
   }, 
-  "Feint": {
-    en: "Feint",
-    es: "Finta",
+  "Forever Hyde": {
+    en: "Forever Hyde",
+    es: "Eternamente Hyde",
   },  
-  "Feint": {
-    en: "Feint",
-    es: "Finta",
+  "Recoiling Blow": {
+    en: "Recoiling Blow",
+    es: "Golpe de rechazo",
   }, 
-  "Feint": {
-    en: "Feint",
-    es: "Finta",
+  "Madness Relents": {
+    en: "Madness Relents",
+    es: "Remite a la locura",
   }, 
-  "Feint": {
-    en: "Feint",
-    es: "Finta",
+  "With Haste!": {
+    en: "With Haste!",
+    es: "Con prisas",
   }, 
-  "Feint": {
-    en: "Feint",
-    es: "Finta",
+  "Succumb to Compulsion": {
+    en: "Succumb to Compulsion",
+    es: "Sucumbir a la obsesion",
   }, 
-  "Feint": {
-    en: "Feint",
-    es: "Finta",
+  "Strange Case": {
+    en: "Strange Case",
+    es: "Un caso extraño",
   },  
-  "Feint": {
-    en: "Feint",
-    es: "Finta",
+  "Duality of Man": {
+    en: "Duality of Man",
+    es: "La dualidad del ser",
   }, 
-  "Feint": {
-    en: "Feint",
-    es: "Finta",
+  "Calming Research": {
+    en: "Calming Research",
+    es: "Investigacion sosegada",
   }, 
-  "Feint": {
-    en: "Feint",
-    es: "Finta",
+  "Pure Evil": {
+    en: "Pure Evil",
+    es: "Pura maldad",
   }, 
-  "Feint": {
-    en: "Feint",
-    es: "Finta",
+  "Distracted Triage": {
+    en: "Distracted Triage",
+    es: "Triaje perturbado",
   }, 
-  "Feint": {
-    en: "Feint",
-    es: "Finta",
+  "Scientific Method": {
+    en: "Scientific Method",
+    es: "El metodo cientifico",
   },  
   "Feint": {
     en: "Feint",

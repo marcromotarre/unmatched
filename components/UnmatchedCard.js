@@ -29,7 +29,7 @@ function UnmatchedCard({
             columnGap: "10px",
           }}
         >
-          <UnmatchedType type={type} value={value} />
+          <UnmatchedType type={type} value={value} characterName={characterName} />
           <Stack
             spacing={0.3}
             direction={"column"}

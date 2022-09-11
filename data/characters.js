@@ -1,4 +1,6 @@
 import ALICE_CHARACTER_CARD_IMAGE from "../images/charcater-cards/alice-character-card.webp";
+import ALICE_CHARACTER_ICON from "../images/character-icons/alice-character-icon.png";
+import THE_JABBERWOCK_CHARACTER_ICON from "../images/character-icons/the-jabberwork-character-icon.jpg";
 import SINBAD_CHARACTER_CARD_IMAGE from "../images/charcater-cards/sinbad-character-card.webp";
 import MEDUSA_CHARACTER_CARD_IMAGE from "../images/charcater-cards/medusa-character-card.webp";
 import KING_ARTHUR_CHARACTER_CARD_IMAGE from "../images/charcater-cards/king-arthur-character-card.webp";
@@ -35,6 +37,11 @@ import RAPTORS_CHARACTER_CARD_IMAGE from "../images/charcater-cards/raptors-char
 
 import BRUCE_LEE_CHARACTER_CARD_IMAGE from "../images/charcater-cards/bruce-lee-character-card.webp";
 import DEADPOOL_CHARACTER_CARD_IMAGE from "../images/charcater-cards/deadpool-character-card.webp";
+
+export const CHARACTER_ICONS = {
+  alice: ALICE_CHARACTER_ICON,
+  "the-jabberwock": THE_JABBERWOCK_CHARACTER_ICON,
+};
 
 export const CHARACTER_CARDS_IMAGES = {
   alice: ALICE_CHARACTER_CARD_IMAGE,
@@ -148,14 +155,14 @@ export const characterNames = {
 
   MULDOON: { name: "Robert Muldoon", slug: "robert-muldoon" },
   "INGEN WORKER": { name: "Ingen Workers", slug: "ingen-workers" },
-  "RAPTORS": { name: "Raptors", slug: "raptors" },
-  
+  RAPTORS: { name: "Raptors", slug: "raptors" },
+
   "T-REX": { name: "T. Rex", slug: "t-rex" },
   "DR. SATTLER": { name: "Dr. Ellie Sattler", slug: "dr-ellie-sattler" },
   "DR. MALCOLM": { name: "Dr. Malcolm", slug: "dr-malcolm" },
 
   "BRUCE LEE": { name: "Bruce Lee", slug: "bruce-lee" },
 
-  "Deadp$$l": { name: "Deadpool", slug: "deadpool" },
-  "Deadpool": { name: "Deadpool", slug: "deadpool" },
+  Deadp$$l: { name: "Deadpool", slug: "deadpool" },
+  Deadpool: { name: "Deadpool", slug: "deadpool" },
 };

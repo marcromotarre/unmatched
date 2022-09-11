@@ -1,5 +1,6 @@
 import { Card, Box, Typography, Stack, Button, Avatar } from "@mui/material";
 import { useState } from "react";
+import { CHARACTER_ICONS } from "../data/characters";
 import { stringAvatar, stringToColor } from "../utils/utils";
 import UnmatchedType from "./UnmatchedType";
 
@@ -11,6 +12,7 @@ function UnmatchedFilter({
   totalCards,
   cardsLeft,
   value,
+  slug,
   onClickFilter = () => {},
 }) {
   const [applied, setApplied] = useState(value);
@@ -30,7 +32,7 @@ function UnmatchedFilter({
       }}
       onClick={clickOnFilter}
     >
-      {name && (
+      {name && !CHARACTER_ICONS[slug] && (
         <Box
           sx={{
             width: "40px",
@@ -48,6 +50,28 @@ function UnmatchedFilter({
           >
             {stringAvatar(name)}
           </Typography>
+        </Box>
+      )}
+      {name && CHARACTER_ICONS[slug] && (
+        <Box
+          sx={{
+            width: "40px",
+            height: "40px",
+            border: `1px solid ${stringToColor(name)}`,
+            backgroundColor: applied ? `${stringToColor(name)}` : "#FFFFFF",
+            borderRadius: "30px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Box
+            sx={{ borderRadius: "30px" }}
+            component="img"
+            width="30px"
+            height="30px"
+            src={CHARACTER_ICONS[slug].src}
+          />
         </Box>
       )}
 

@@ -1,5 +1,11 @@
 import { Card, Box, Typography, Stack } from "@mui/material";
-import { ATTACK_IMAGE, DEFENSE_IMAGE, SCHEME_IMAGE, VERSATILE_IMAGE } from "../data/images";
+import { characterNames, CHARACTER_ICONS } from "../data/characters";
+import {
+  ATTACK_IMAGE,
+  DEFENSE_IMAGE,
+  SCHEME_IMAGE,
+  VERSATILE_IMAGE,
+} from "../data/images";
 
 const typeColor = (type) => {
   if (type === "attack") return "#F8372F";
@@ -17,29 +23,48 @@ const typeImage = (type) => {
   return ATTACK_IMAGE;
 };
 
-function UnmatchedType({ type, value }) {
+function UnmatchedType({ characterName, type, value }) {
+  const characterNameSlug = characterNames[characterName].slug;
   return (
     <Stack
       spacing={1}
-      direction={"row"}
+      direction={"column"}
       sx={{
         display: "flex",
         justofyContent: "center",
         alignItems: "center",
         backgroundColor: typeColor(type),
         width: "fit-content",
+        width: "100%",
         padding: 1,
-        width: "100%"
       }}
     >
-      <Box
-        component="img"
-        width="50%"
-        src={typeImage(type).src}
-      />
-      {type !== "scheme" && (
-        <Typography sx={{ color: "white" }}>{value}</Typography>
+      {CHARACTER_ICONS[characterNameSlug] && (
+        <Card
+          component="img"
+          width="30px"
+          height="30px"
+          sx={{ borderRadius: "25px", boxShadow: 3  }}
+          src={CHARACTER_ICONS[characterNameSlug].src}
+        />
       )}
+      <Stack
+        spacing={1}
+        direction={"row"}
+        sx={{
+          display: "flex",
+          justofyContent: "center",
+          alignItems: "center",
+          backgroundColor: typeColor(type),
+          width: "fit-content",
+          width: "100%",
+        }}
+      >
+        <Box component="img" width="50%" src={typeImage(type).src} />
+        {type !== "scheme" && (
+          <Typography sx={{ color: "white" }}>{value}</Typography>
+        )}
+      </Stack>
     </Stack>
   );
 }

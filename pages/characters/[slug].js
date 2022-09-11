@@ -142,6 +142,7 @@ function About() {
           <UnmatchedFilter
             key={index}
             name={character.name}
+            slug={character.slug}
             totalCards={
               deck.cards.filter(
                 ({ characterName }) =>
