@@ -25,7 +25,7 @@ function UnmatchedCard({
         <Box
           sx={{
             display: "grid",
-            gridTemplateColumns: "50px auto 2px",
+            gridTemplateColumns: "50px auto 5px",
             columnGap: "10px",
           }}
         >

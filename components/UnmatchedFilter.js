@@ -20,16 +20,21 @@ function UnmatchedFilter({
     setApplied(!applied);
   };
 
- 
-
   return (
-    <Box>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+      onClick={clickOnFilter}
+    >
       {name && (
         <Box
-          onClick={clickOnFilter}
           sx={{
-            width: "30px",
-            height: "30px",
+            width: "40px",
+            height: "40px",
             border: `1px solid ${stringToColor(name)}`,
             backgroundColor: applied ? `${stringToColor(name)}` : "#FFFFFF",
             borderRadius: "30px",
@@ -48,13 +53,15 @@ function UnmatchedFilter({
 
       {!name && (
         <Box
-          onClick={clickOnFilter}
           sx={{
-            width: "30px",
-            height: "30px",
+            width: "40px",
+            height: "40px",
             border: `1px solid ${color}`,
             backgroundColor: applied ? `${color}` : "#FFFFFF",
             borderRadius: "2px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
           <Box
@@ -65,7 +72,9 @@ function UnmatchedFilter({
           />
         </Box>
       )}
-      <Typography>{cardsLeft} / {totalCards}</Typography>
+      <Typography sx={{ fontSize: "10px" }}>
+        {cardsLeft} / {totalCards}
+      </Typography>
     </Box>
   );
 }
