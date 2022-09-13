@@ -263,6 +263,7 @@ function About() {
               immediateText={card.immediateText}
               duringText={card.duringText}
               afterText={card.afterText}
+              boost={card.boost}
               discardCard={() => {
                 const _cards = [...deck.cards];
                 const index = _cards.findIndex(({id}) => id === card.id)

@@ -53,7 +53,7 @@ function UnmatchedType({ characterName, type, value }) {
         direction={"row"}
         sx={{
           display: "flex",
-          justofyContent: "center",
+          justifyContent: "center",
           alignItems: "center",
           backgroundColor: typeColor(type),
           width: "fit-content",

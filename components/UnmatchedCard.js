@@ -14,12 +14,13 @@ function UnmatchedCard({
   immediateText,
   duringText,
   afterText,
+  boost,
   discardCard = () => {},
 }) {
   return (
-    <Box sx={{ position: "relative", width: "100%" }}>
+    <Box sx={{ position: "relative", width: "100%", opacity: discarted ? "0.21" : 1, }}>
       <Card
-        sx={{ opacity: discarted ? "0.21" : 1, width: "100%" }}
+        sx={{  width: "100%" }}
         onClick={(discarted) => discardCard(!discarted)}
       >
         <Box
@@ -77,30 +78,26 @@ function UnmatchedCard({
           </Stack>
         </Box>
       </Card>
-      {characterName !== "ANY" && (
+      {boost && boost !== 0 && (
         <Box
           onClick={(discarted) => discardCard(!discarted)}
           sx={{
             opacity: "1",
-            right: "-15px",
-            top: "calc(50% - 15px)",
+            right: "-12px",
+            top: "calc(50% - 12px)",
             position: "absolute",
-            width: "30px",
-            height: "30px",
-            border: `1px solid ${stringToColor(
-              characterNames[characterName]?.name
-            )}`,
-            backgroundColor: `${stringToColor(
-              characterNames[characterName]?.name
-            )}`,
+            width: "24px",
+            height: "24px",
+            border: `2px solid black`,
+            backgroundColor: 'white',
             borderRadius: "20px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
           }}
         >
-          <Typography sx={{ color: "#FFFFFF" }}>
-            {stringAvatar(characterNames[characterName]?.name)}
+          <Typography sx={{ color: "#000" }}>
+            {boost}
           </Typography>
         </Box>
       )}

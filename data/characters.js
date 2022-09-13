@@ -2,24 +2,42 @@ import ALICE_CHARACTER_CARD_IMAGE from "../images/charcater-cards/alice-characte
 import ALICE_CHARACTER_ICON from "../images/character-icons/alice-character-icon.png";
 import THE_JABBERWOCK_CHARACTER_ICON from "../images/character-icons/the-jabberwork-character-icon.jpg";
 import SINBAD_CHARACTER_CARD_IMAGE from "../images/charcater-cards/sinbad-character-card.webp";
+import SINBAD_CHARACTER_ICON from "../images/character-icons/sinbad-character-icon.jpg";
+import THE_PORTER_CHARACTER_ICON from "../images/character-icons/the-porter-character-icon.jpg";
 import MEDUSA_CHARACTER_CARD_IMAGE from "../images/charcater-cards/medusa-character-card.webp";
+import MEDUSA_CHARACTER_ICON from "../images/character-icons/medusa-character-icon.webp";
+import HARPY_CHARACTER_ICON from "../images/character-icons/harpy-character-icon.jpg";
 import KING_ARTHUR_CHARACTER_CARD_IMAGE from "../images/charcater-cards/king-arthur-character-card.webp";
+import KING_ARTHUR_CHARACTER_ICON from "../images/character-icons/king-arthur-character-icon.jpg";
+import MERLIN_CHARACTER_ICON from "../images/character-icons/merlin-character-icon.webp";
 
 import BIGFOOT_CHARACTER_CARD_IMAGE from "../images/charcater-cards/bigfoot-character-card.webp";
+import BIGFOOT_CHARACTER_ICON from "../images/character-icons/big-foot-character-icon.jpg";
+import THE_JACKALOPE_CHARACTER_ICON from "../images/character-icons/the-jackalope-character-icon.jpg";
 import ROBIN_HOOD_CHARACTER_CARD_IMAGE from "../images/charcater-cards/robin-hood-character-card.webp";
+import ROBIN_HOOD_CHARACTER_ICON from "../images/character-icons/robin-hood-character-icon.jpg";
+import OUTLAWS_CHARACTER_ICON from "../images/character-icons/outlaws-character-icon.jpg";
 
 import LITTLE_RED_CHARACTER_CARD_IMAGE from "../images/charcater-cards/little-red-unmatched-card.webp";
+import LITTLE_RED_CHARACTER_ICON from "../images/character-icons/little-red-character-icon.jpg";
+import THE_HUNTER_CHARACTER_ICON from "../images/character-icons/the-hunter-character-icon.jpg";
 import BEOWULF_CHARACTER_CARD_IMAGE from "../images/charcater-cards/beowulf-character-card.webp";
 
 import DRACULA_CHARACTER_CARD_IMAGE from "../images/charcater-cards/dracula-character-card.webp";
+import DRACULA_CHARACTER_ICON from "../images/character-icons/dracula-character-icon.jpg";
+import THE_SISTERS_CHARACTER_ICON from "../images/character-icons/the-sisters-character-icon.jpg";
 import SHERLOCK_HOLMES_CHARACTER_CARD_IMAGE from "../images/charcater-cards/sherlock-holmes-character-card.webp";
 import INVISIBLE_MAN_CHARACTER_CARD_IMAGE from "../images/charcater-cards/invisible-man-character-card.webp";
 import JEKYLL_HYDE_CHARACTER_CARD_IMAGE from "../images/charcater-cards/jekyll-hyde-character-card.webp";
 
 import ACHILLES_CHARACTER_CARD_IMAGE from "../images/charcater-cards/achilles-character-card.webp";
+import ACHILLES_CHARACTER_ICON from "../images/character-icons/achiles-character-icon.jpg";
+import PATROCLUS_CHARACTER_ICON from "../images/character-icons/patroclus-character-icon.jpg";
 import BLOODY_MARY_CHARACTER_CARD_IMAGE from "../images/charcater-cards/bloody-mary-character-card.webp";
 import SUN_WUKONG_CHARACTER_CARD_IMAGE from "../images/charcater-cards/sun-wukong-character-card.webp";
 import YENNENGA_CHARACTER_CARD_IMAGE from "../images/charcater-cards/yennenga-character-card.jpeg";
+import YENNENGA_CHARACTER_ICON from "../images/character-icons/yennenga-character-icon.webp";
+import THE_ARCHERS_CHARACTER_ICON from "../images/character-icons/archers-character-icon.jpg";
 
 import GHOST_RIDER_CHARACTER_CARD_IMAGE from "../images/charcater-cards/ghost-rider-character-card.webp";
 import LUKE_CAGE_CHARACTER_CARD_IMAGE from "../images/charcater-cards/luke-cage-character-card.webp";
@@ -41,6 +59,26 @@ import DEADPOOL_CHARACTER_CARD_IMAGE from "../images/charcater-cards/deadpool-ch
 export const CHARACTER_ICONS = {
   alice: ALICE_CHARACTER_ICON,
   "the-jabberwock": THE_JABBERWOCK_CHARACTER_ICON,
+  medusa: MEDUSA_CHARACTER_ICON,
+  harpies: HARPY_CHARACTER_ICON,
+  "king-arthur": KING_ARTHUR_CHARACTER_ICON,
+  "merlin": MERLIN_CHARACTER_ICON,
+  "sinbad": SINBAD_CHARACTER_ICON,
+  "the-porter": THE_PORTER_CHARACTER_ICON,
+  "dracula": DRACULA_CHARACTER_ICON,
+  "the-sisters": THE_SISTERS_CHARACTER_ICON,
+  "yennenga": YENNENGA_CHARACTER_ICON,
+  "archers": THE_ARCHERS_CHARACTER_ICON,
+  "achilles": ACHILLES_CHARACTER_ICON,
+  "patroclus": PATROCLUS_CHARACTER_ICON,
+  "little-red": LITTLE_RED_CHARACTER_ICON,
+  "huntsman-red": LITTLE_RED_CHARACTER_ICON,
+  "huntsman": THE_HUNTER_CHARACTER_ICON,
+  "bigfoot": BIGFOOT_CHARACTER_ICON,
+  "jackalope": THE_JACKALOPE_CHARACTER_ICON,
+  "the-jackalope": THE_JACKALOPE_CHARACTER_ICON,
+  "robin-hood": ROBIN_HOOD_CHARACTER_ICON,
+  "outlaws": OUTLAWS_CHARACTER_ICON,
 };
 
 export const CHARACTER_CARDS_IMAGES = {
