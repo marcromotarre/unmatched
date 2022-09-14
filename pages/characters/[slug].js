@@ -31,8 +31,8 @@ function About() {
   useEffect(() => {
     const _cards = [
       ...cards.sort((a, b) => {
-       // if (a.discarted === true && b.discarted === false) return 1;
-       // if (a.discarted === false && b.discarted === true) return -1;
+        // if (a.discarted === true && b.discarted === false) return 1;
+        // if (a.discarted === false && b.discarted === true) return -1;
         if (a.type !== "scheme" && b.type === "scheme") return -1;
         if (a.type === "scheme" && b.type !== "scheme") return 1;
         if (a.type !== "scheme" && b.type === "scheme") return -1;
@@ -50,9 +50,11 @@ function About() {
     });
     if (cardTypesFilter.attack) {
       filteredTypes.push("attack");
+      filteredTypes.push("versatile");
     }
     if (cardTypesFilter.defense) {
       filteredTypes.push("defense");
+      filteredTypes.push("versatile");
     }
     if (cardTypesFilter.scheme) {
       filteredTypes.push("scheme");
@@ -88,7 +90,6 @@ function About() {
       setFilteredCards(_cards);
     }
   }, [cardTypesFilter, charactersFilter, deck]);
-
   useEffect(() => {
     const { slug } = router.query;
     if (slug) {
@@ -138,41 +139,48 @@ function About() {
           justifyContent: "space-around",
         }}
       >
-        {[...deck.heroes, ...deck.sidekicks].map((character, index) => (
-          <UnmatchedFilter
-            key={index}
-            name={character.name}
-            slug={character.slug}
-            totalCards={
-              deck.cards.filter(
-                ({ characterName }) =>
-                  characterName === "ANY" ||
-                  character.slug === characterNames[characterName]?.slug
-              ).length
-            }
-            cardsLeft={
-              deck.cards.filter(
-                ({ characterName, discarted }) =>
-                  (characterName === "ANY" ||
-                    character.slug === characterNames[characterName]?.slug) &&
-                  discarted === false
-              ).length
-            }
-            value={charactersFilter[character.slug]}
-            onClickFilter={(filterValue) =>
-              setCharactersFilter({
-                ...charactersFilter,
-                [character.slug]: filterValue,
-              })
-            }
-          />
-        ))}
+        {[...deck.heroes, ...deck.sidekicks].length > 1 &&
+          [...deck.heroes, ...deck.sidekicks].map((character, index) => (
+            <UnmatchedFilter
+              key={index}
+              name={character.name}
+              slug={character.slug}
+              totalCards={
+                deck.cards.filter(
+                  ({ characterName }) =>
+                    characterName === "ANY" ||
+                    character.slug === characterNames[characterName]?.slug
+                ).length
+              }
+              cardsLeft={
+                deck.cards.filter(
+                  ({ characterName, discarted }) =>
+                    (characterName === "ANY" ||
+                      character.slug === characterNames[characterName]?.slug) &&
+                    discarted === false
+                ).length
+              }
+              value={charactersFilter[character.slug]}
+              onClickFilter={(filterValue) =>
+                setCharactersFilter({
+                  ...charactersFilter,
+                  [character.slug]: filterValue,
+                })
+              }
+            />
+          ))}
 
         <UnmatchedFilter
-          totalCards={deck.cards.filter(({ type }) => type === "attack").length}
+          totalCards={
+            deck.cards.filter(
+              ({ type }) => type === "attack" || type === "versatile"
+            ).length
+          }
           cardsLeft={
             deck.cards.filter(
-              ({ type, discarted }) => type === "attack" && discarted === false
+              ({ type, discarted }) =>
+                (type === "attack" && discarted === false) ||
+                (type === "versatile" && discarted === false)
             ).length
           }
           image={ATTACK_IMAGE.src}
@@ -185,11 +193,15 @@ function About() {
         />
         <UnmatchedFilter
           totalCards={
-            deck.cards.filter(({ type }) => type === "defense").length
+            deck.cards.filter(
+              ({ type }) => type === "defense" || type === "versatile"
+            ).length
           }
           cardsLeft={
             deck.cards.filter(
-              ({ type, discarted }) => type === "defense" && discarted === false
+              ({ type, discarted }) =>
+                (type === "defense" && discarted === false) ||
+                (type === "versatile" && discarted === false)
             ).length
           }
           image={DEFENSE_IMAGE.src}
@@ -200,24 +212,7 @@ function About() {
             setCardTypesFilter({ ...cardTypesFilter, defense: filterValue })
           }
         />
-        <UnmatchedFilter
-          totalCards={
-            deck.cards.filter(({ type }) => type === "versatile").length
-          }
-          cardsLeft={
-            deck.cards.filter(
-              ({ type, discarted }) =>
-                type === "versatile" && discarted === false
-            ).length
-          }
-          image={VERSATILE_IMAGE.src}
-          unselectedImage={VERSATILE_UNSELECTED_IMAGE.src}
-          color="#9941BB"
-          value={cardTypesFilter.versatile}
-          onClickFilter={(filterValue) =>
-            setCardTypesFilter({ ...cardTypesFilter, versatile: filterValue })
-          }
-        />
+
         <UnmatchedFilter
           totalCards={deck.cards.filter(({ type }) => type === "scheme").length}
           cardsLeft={
@@ -266,8 +261,8 @@ function About() {
               boost={card.boost}
               discardCard={() => {
                 const _cards = [...deck.cards];
-                const index = _cards.findIndex(({id}) => id === card.id)
-                _cards[index].discarted =  !_cards[index].discarted;
+                const index = _cards.findIndex(({ id }) => id === card.id);
+                _cards[index].discarted = !_cards[index].discarted;
                 console.log(_cards);
                 setDeck({ ...deck, cards: _cards });
               }}
