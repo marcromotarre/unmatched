@@ -29,22 +29,30 @@ function Set({ set }) {
 }
 
 function Charcaters() {
-  console.log(DECKS.decks);
+  console.log(SETS.sets);
   return (
     <Box>
       {[
-        SETS.sets[0],
-        SETS.sets[4],
-        SETS.sets[9],
-        SETS.sets[1],
-        SETS.sets[10],
-        SETS.sets[13],
-        SETS.sets[16],
-        SETS.sets[3],
-        SETS.sets[15],
-        SETS.sets[2],
-        SETS.sets[12],
+        SETS.sets.find(({ slug }) => slug === "battle-of-legends-volume-one"),
+        SETS.sets.find(({ slug }) => slug === "robin-hood-vs-bigfoot"),
+        SETS.sets.find(({ slug }) => slug === "little-red-vs-beowulf"),
+        SETS.sets.find(({ slug }) => slug === "houdini-vs-the-genie"),
+        
+        
+        SETS.sets.find(({ slug }) => slug === "cobble-and-fog"),
+        SETS.sets.find(({ slug }) => slug === "battle-of-legends-volume-two"),
+        SETS.sets.find(({ slug }) => slug === "jurassic-park-ingen-vs-raptors"),
+        SETS.sets.find(({ slug }) => slug === "jurassic-park-sattler-vs-t-rex"),
+        SETS.sets.find(({ slug }) => slug === "redemption-row"),
+        SETS.sets.find(({ slug }) => slug === "hells-kitchen"),
+        
+        //SETS.sets.find(({ slug }) => slug === "for-king-and-country"), 
+        //SETS.sets.find(({ slug }) => slug === "teen-spirit"), 
 
+        SETS.sets.find(({ slug }) => slug === "deadpool"),
+        SETS.sets.find(({ slug }) => slug === "bruce-lee"),
+        
+        
       ].map((set) => (
         <Set key={set.slug} set={set}></Set>
       ))}

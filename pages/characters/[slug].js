@@ -14,7 +14,7 @@ import {
   VERSATILE_IMAGE,
   VERSATILE_UNSELECTED_IMAGE,
 } from "../../data/images";
-import { characterNames } from "../../data/characters";
+import { characterNames, CHARACTER_FUNCTIONS } from "../../data/characters";
 
 function About() {
   const [deck, setDeck] = useState(null);
@@ -93,7 +93,7 @@ function About() {
   useEffect(() => {
     const { slug } = router.query;
     if (slug) {
-      const d = DECKS.decks.find((deck) => deck.slug === slug);
+      let d = DECKS.decks.find((deck) => deck.slug === slug);
       let cards = [];
       d.cards.forEach((card) => {
         const quantity = card.quantity;
@@ -108,6 +108,9 @@ function About() {
           id: index,
         })),
       ];
+      if (CHARACTER_FUNCTIONS[slug]?.beforeDeck) {
+        d = CHARACTER_FUNCTIONS[slug].beforeDeck(d);
+      }
       setDeck(d);
       setCards(d.cards);
       setFilteredCards(d.cards);
@@ -124,7 +127,7 @@ function About() {
   if (!deck) return;
 
   return (
-    <Box>
+    <Box sx={{ background: "white" }}>
       <Box
         sx={{
           borderBottom: "1px solid black",

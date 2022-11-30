@@ -1,0 +1,392 @@
+const DRACULA = {
+  cards: [
+    {
+      afterText: null,
+      basicText: null,
+      boost: 2,
+      card_notes: null,
+      characterName: "ANY",
+      deck_card_notes: null,
+      duringText: null,
+      image:
+        "https://static.unmatched.cards/images/umdb/decks/dracula/feint.png",
+      immediateText: "Cancel all effects on your opponent's card.",
+      other_decks: [
+        {
+          name: "Alice",
+          slug: "alice",
+        },
+        {
+          name: "Bigfoot",
+          slug: "bigfoot",
+        },
+        {
+          name: "Bruce Lee",
+          slug: "bruce-lee",
+        },
+        {
+          name: "Jekyll & Hyde",
+          slug: "jekyll-hyde",
+        },
+        {
+          name: "King Arthur",
+          slug: "king-arthur",
+        },
+        {
+          name: "Medusa",
+          slug: "medusa",
+        },
+        {
+          name: "Robin Hood",
+          slug: "robin-hood",
+        },
+        {
+          name: "Moon Knight",
+          slug: "moon-knight",
+        },
+        {
+          name: "Bloody Mary",
+          slug: "bloody-mary",
+        },
+        {
+          name: "Ghost Rider",
+          slug: "ghost-rider",
+        },
+        {
+          name: "Deadpool",
+          slug: "deadpool",
+        },
+        {
+          name: "Dr. Ellie Sattler",
+          slug: "dr-ellie-sattler",
+        },
+        {
+          name: "Achilles",
+          slug: "achilles",
+        },
+        {
+          name: "Daredevil",
+          slug: "daredevil",
+        },
+        {
+          name: "Bullseye",
+          slug: "bullseye",
+        },
+        {
+          name: "Raptors",
+          slug: "raptors",
+        },
+        {
+          name: "Sherlock Holmes",
+          slug: "sherlock-holmes",
+        },
+        {
+          name: "Sinbad",
+          slug: "sinbad",
+        },
+        {
+          name: "InGen",
+          slug: "ingen",
+        },
+        {
+          name: "Willow",
+          slug: "willow",
+        },
+        {
+          name: "Angel",
+          slug: "angel",
+        },
+        {
+          name: "Spike",
+          slug: "spike",
+        },
+        {
+          name: "Buffy",
+          slug: "buffy",
+        },
+        {
+          name: "Beowulf",
+          slug: "beowulf",
+        },
+      ],
+      quantity: 3,
+      slug: "feint",
+      title: "Feint",
+      type: "versatile",
+      value: 2,
+    },
+    {
+      afterText: "Move your fighter up to 3 spaces.",
+      basicText: null,
+      boost: 1,
+      card_notes: null,
+      characterName: "ANY",
+      deck_card_notes: null,
+      duringText: null,
+      image:
+        "https://static.unmatched.cards/images/umdb/decks/dracula/dash.png",
+      immediateText: null,
+      other_decks: [
+        {
+          name: "Medusa",
+          slug: "medusa",
+        },
+      ],
+      quantity: 3,
+      slug: "dash",
+      title: "Dash",
+      type: "versatile",
+      value: 3,
+    },
+    {
+      afterText: "Draw 1 card.",
+      basicText: null,
+      boost: 1,
+      card_notes: null,
+      characterName: "ANY",
+      deck_card_notes: null,
+      duringText: null,
+      image:
+        "https://static.unmatched.cards/images/umdb/decks/dracula/exploit.png",
+      immediateText: null,
+      other_decks: [
+        {
+          name: "Sinbad",
+          slug: "sinbad",
+        },
+      ],
+      quantity: 2,
+      slug: "exploit",
+      title: "Exploit",
+      type: "versatile",
+      value: 4,
+    },
+    {
+      afterText: null,
+      basicText: null,
+      boost: 3,
+      card_notes: null,
+      characterName: "ANY",
+      deck_card_notes: null,
+      duringText:
+        "Your opponent discards 1 random card. Add its BOOST value to this card's attack value.",
+      image:
+        "https://static.unmatched.cards/images/umdb/decks/dracula/ambush.png",
+      immediateText: null,
+      other_decks: [
+        {
+          name: "Robin Hood",
+          slug: "robin-hood",
+        },
+        {
+          name: "Raptors",
+          slug: "raptors",
+        },
+      ],
+      quantity: 2,
+      slug: "ambush",
+      title: "Ambush",
+      type: "attack",
+      value: 2,
+    },
+    {
+      afterText: null,
+      basicText: null,
+      boost: 3,
+      card_notes: null,
+      characterName: "DRACULA",
+      deck_card_notes: null,
+      duringText:
+        "This card's value is +1 for each Sister in the same zone as the opposing fighter.",
+      image:
+        "https://static.unmatched.cards/images/umdb/decks/dracula/feeding-frenzy.png",
+      immediateText: null,
+      other_decks: [],
+      quantity: 2,
+      slug: "feeding-frenzy",
+      title: "Feeding Frenzy",
+      type: "attack",
+      value: 2,
+    },
+    {
+      afterText: null,
+      basicText: null,
+      boost: 4,
+      card_notes: null,
+      characterName: "DRACULA",
+      deck_card_notes: null,
+      duringText:
+        "You may discard any number of cards from your hand. This card's value is +1 for each card you discard.",
+      image:
+        "https://static.unmatched.cards/images/umdb/decks/dracula/beastform.png",
+      immediateText: null,
+      other_decks: [],
+      quantity: 2,
+      slug: "beastform",
+      title: "Beastform",
+      type: "attack",
+      value: 6,
+    },
+    {
+      afterText: null,
+      basicText: null,
+      boost: 3,
+      card_notes: null,
+      characterName: "DRACULA",
+      deck_card_notes: null,
+      duringText: null,
+      image:
+        "https://static.unmatched.cards/images/umdb/decks/dracula/do-my-bidding.png",
+      immediateText:
+        "Return your opponent's attack card to their hand. Look at their hand and choose an attack or versatile card for them to play. (It may be the same card.)",
+      other_decks: [],
+      quantity: 2,
+      slug: "do-my-bidding",
+      title: "Do My Bidding",
+      type: "defense",
+      value: 3,
+    },
+    {
+      afterText: null,
+      basicText: null,
+      boost: 2,
+      card_notes: null,
+      characterName: "DRACULA",
+      deck_card_notes: null,
+      duringText:
+        "Add the BOOST value from your opponent's attack card to the defense value of this card.",
+      image:
+        "https://static.unmatched.cards/images/umdb/decks/dracula/look-into-my-eyes.png",
+      immediateText: null,
+      other_decks: [],
+      quantity: 2,
+      slug: "look-into-my-eyes",
+      title: "Look Into My Eyes",
+      type: "defense",
+      value: 1,
+    },
+    {
+      afterText: null,
+      basicText: "Place Dracula in any space.\nGain 1 action.",
+      boost: 2,
+      card_notes: null,
+      characterName: "DRACULA",
+      deck_card_notes: null,
+      duringText: null,
+      image:
+        "https://static.unmatched.cards/images/umdb/decks/dracula/mistform.png",
+      immediateText: null,
+      other_decks: [],
+      quantity: 2,
+      slug: "mistform",
+      title: "Mistform",
+      type: "scheme",
+      value: 1,
+    },
+    {
+      afterText: null,
+      basicText:
+        "Deal 1 damage to all opposing fighters adjacent to Dracula. Dracula recovers 1 health for each damage dealt.",
+      boost: 4,
+      card_notes: null,
+      characterName: "DRACULA",
+      deck_card_notes: null,
+      duringText: null,
+      image:
+        "https://static.unmatched.cards/images/umdb/decks/dracula/prey-upon.png",
+      immediateText: null,
+      other_decks: [],
+      quantity: 2,
+      slug: "prey-upon",
+      title: "Prey Upon",
+      type: "scheme",
+      value: 1,
+    },
+    {
+      afterText: null,
+      basicText:
+        "Recover 2 health. Return a defeated Sister (if any) to any space in Dracula's zone.",
+      boost: 2,
+      card_notes: null,
+      characterName: "DRACULA",
+      deck_card_notes: null,
+      duringText: null,
+      image:
+        "https://static.unmatched.cards/images/umdb/decks/dracula/baptism-of-blood.png",
+      immediateText: null,
+      other_decks: [],
+      quantity: 2,
+      slug: "baptism-of-blood",
+      title: "Baptism of Blood",
+      type: "scheme",
+      value: 1,
+    },
+    {
+      afterText:
+        "If you won the combat, place Dracula in any space adjacent to the opposing fighter.",
+      basicText: null,
+      boost: 3,
+      card_notes: null,
+      characterName: "SISTER",
+      deck_card_notes: null,
+      duringText: null,
+      image:
+        "https://static.unmatched.cards/images/umdb/decks/dracula/thirst-for-sustenance.png",
+      immediateText: null,
+      other_decks: [],
+      quantity: 3,
+      slug: "thirst-for-sustenance",
+      title: "Thirst for Sustenance",
+      type: "attack",
+      value: 3,
+    },
+    {
+      afterText: null,
+      basicText:
+        "Move any fighter up to 2 spaces. After moving, deal 1 damage to the moved fighter for each Sister adjacent to them.",
+      boost: 2,
+      card_notes: null,
+      characterName: "SISTER",
+      deck_card_notes: null,
+      duringText: null,
+      image:
+        "https://static.unmatched.cards/images/umdb/decks/dracula/ravening-seduction.png",
+      immediateText: null,
+      other_decks: [],
+      quantity: 3,
+      slug: "ravening-seduction",
+      title: "Ravening Seduction",
+      type: "scheme",
+      value: 1,
+    },
+  ],
+  heroes: [
+    {
+      attack_type: "melee",
+      hp: 13,
+      name: "Dracula",
+      quantity: 1,
+      slug: "dracula",
+    },
+  ],
+  movement: 2,
+  name: "Dracula",
+  notes: null,
+  quote: null,
+  set: "Cobble & Fog",
+  setSlug: "cobble-and-fog",
+  sidekicks: [
+    {
+      attack_type: "melee",
+      hp: 1,
+      name: "The Sisters",
+      quantity: 3,
+      slug: "the-sisters",
+    },
+  ],
+  slug: "dracula",
+  special:
+    "At the start of your turn, you may deal 1 damage to a fighter adjacent to Dracula. If you do, draw a card.",
+};
+
+export default DRACULA;

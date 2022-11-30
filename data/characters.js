@@ -56,29 +56,68 @@ import RAPTORS_CHARACTER_CARD_IMAGE from "../images/charcater-cards/raptors-char
 import BRUCE_LEE_CHARACTER_CARD_IMAGE from "../images/charcater-cards/bruce-lee-character-card.webp";
 import DEADPOOL_CHARACTER_CARD_IMAGE from "../images/charcater-cards/deadpool-character-card.webp";
 
+import HOUDINI_CHARACTER_CARD_IMAGE from "../images/charcater-cards/houdini-character-card.webp";
+import GENIE_CHARACTER_CARD_IMAGE from "../images/charcater-cards/genie-character-card.webp";
+
 export const CHARACTER_ICONS = {
   alice: ALICE_CHARACTER_ICON,
   "the-jabberwock": THE_JABBERWOCK_CHARACTER_ICON,
   medusa: MEDUSA_CHARACTER_ICON,
   harpies: HARPY_CHARACTER_ICON,
   "king-arthur": KING_ARTHUR_CHARACTER_ICON,
-  "merlin": MERLIN_CHARACTER_ICON,
-  "sinbad": SINBAD_CHARACTER_ICON,
+  merlin: MERLIN_CHARACTER_ICON,
+  sinbad: SINBAD_CHARACTER_ICON,
   "the-porter": THE_PORTER_CHARACTER_ICON,
-  "dracula": DRACULA_CHARACTER_ICON,
+  dracula: DRACULA_CHARACTER_ICON,
   "the-sisters": THE_SISTERS_CHARACTER_ICON,
-  "yennenga": YENNENGA_CHARACTER_ICON,
-  "archers": THE_ARCHERS_CHARACTER_ICON,
-  "achilles": ACHILLES_CHARACTER_ICON,
-  "patroclus": PATROCLUS_CHARACTER_ICON,
+  yennenga: YENNENGA_CHARACTER_ICON,
+  archers: THE_ARCHERS_CHARACTER_ICON,
+  achilles: ACHILLES_CHARACTER_ICON,
+  patroclus: PATROCLUS_CHARACTER_ICON,
   "little-red": LITTLE_RED_CHARACTER_ICON,
   "huntsman-red": LITTLE_RED_CHARACTER_ICON,
-  "huntsman": THE_HUNTER_CHARACTER_ICON,
-  "bigfoot": BIGFOOT_CHARACTER_ICON,
-  "jackalope": THE_JACKALOPE_CHARACTER_ICON,
+  huntsman: THE_HUNTER_CHARACTER_ICON,
+  bigfoot: BIGFOOT_CHARACTER_ICON,
+  jackalope: THE_JACKALOPE_CHARACTER_ICON,
   "the-jackalope": THE_JACKALOPE_CHARACTER_ICON,
   "robin-hood": ROBIN_HOOD_CHARACTER_ICON,
-  "outlaws": OUTLAWS_CHARACTER_ICON,
+  outlaws: OUTLAWS_CHARACTER_ICON,
+};
+
+export const CHARACTER_FUNCTIONS = {
+  "sun-wukong": {
+    beforeDeck: (deck) => {
+      return { ...deck, sidekicks: [] };
+    },
+  },
+  "moon-knight": {
+    beforeDeck: (deck) => {
+      return { ...deck, heroes: [deck.heroes[0]] };
+    },
+  },
+  "jekyll-hyde": {
+    beforeDeck: (deck) => {
+      return {
+        ...deck,
+        heroes: [
+          {
+            attack_type: "melee",
+            hp: 16,
+            name: "Dr. Jekyll",
+            quantity: 1,
+            slug: "jekyll",
+          },
+          {
+            attack_type: "melee",
+            hp: 16,
+            name: "Mr. Hyde",
+            quantity: 1,
+            slug: "hyde",
+          },
+        ],
+      };
+    },
+  },
 };
 
 export const CHARACTER_CARDS_IMAGES = {
@@ -119,6 +158,9 @@ export const CHARACTER_CARDS_IMAGES = {
 
   "bruce-lee": BRUCE_LEE_CHARACTER_CARD_IMAGE,
   deadpool: DEADPOOL_CHARACTER_CARD_IMAGE,
+
+  "harry-houdini": HOUDINI_CHARACTER_CARD_IMAGE,
+  "the-genie": GENIE_CHARACTER_CARD_IMAGE,
 };
 
 export const characterNames = {
@@ -144,8 +186,8 @@ export const characterNames = {
   HOLMES: { name: "Sherlock Holmes", slug: "sherlock-holmes" },
   "DR. WATSON": { name: "Dr. Watson", slug: "dr-watson" },
 
-  "MR. HYDE": { name: "Mr. Hyde", slug: "jekyll-hyde" },
-  "DR. JEKYLL": { name: "Dr. Jekyll", slug: "jekyll-hyde" },
+  "MR. HYDE": { name: "Mr. Hyde", slug: "jekyll" },
+  "DR. JEKYLL": { name: "Dr. Jekyll", slug: "hyde" },
 
   "INVISIBLE MAN": { name: "Invisible Man", slug: "invisible-man" },
 
@@ -203,4 +245,17 @@ export const characterNames = {
 
   Deadp$$l: { name: "Deadpool", slug: "deadpool" },
   Deadpool: { name: "Deadpool", slug: "deadpool" },
+
+  HOUDINI: {
+    name: "Harry Houdini",
+    slug: "harry-houdini",
+  },
+  BESS: {
+    name: "Bess",
+    slug: "bess",
+  },
+  "THE GENIE": {
+    name: "The Genie",
+    slug: "the-genie",
+  },
 };

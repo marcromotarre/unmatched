@@ -46,7 +46,7 @@ function UnmatchedFilter({
           }}
         >
           <Typography
-            sx={{ color: applied ? "#FFFFFF" : `${stringToColor(name)}` }}
+            sx={{ color: applied ? "#000" : `${stringToColor(name)}` }}
           >
             {stringAvatar(name)}
           </Typography>
@@ -96,7 +96,7 @@ function UnmatchedFilter({
           />
         </Box>
       )}
-      <Typography sx={{ fontSize: "10px" }}>
+      <Typography sx={{ color: "#000", fontSize: "10px" }}>
         {cardsLeft} / {totalCards}
       </Typography>
     </Box>
