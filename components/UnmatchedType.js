@@ -1,4 +1,4 @@
-import { Card, Box, Typography, Stack } from "@mui/material";
+import { Card, Box, Typography, Stack, Chip } from "@mui/material";
 import { characterNames, CHARACTER_ICONS } from "../data/characters";
 import {
   ATTACK_IMAGE,
@@ -44,7 +44,7 @@ function UnmatchedType({ characterName, type, value }) {
           component="img"
           width="30px"
           height="30px"
-          sx={{ borderRadius: "25px", boxShadow: 3  }}
+          sx={{ borderRadius: "25px", boxShadow: 3 }}
           src={CHARACTER_ICONS[characterNameSlug].src}
         />
       )}
